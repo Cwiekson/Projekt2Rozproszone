@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="space-pb">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <form class="form-flat-style" method="POST" id="photo_form" enctype="multipart/form-data">{% csrf_token %}
+          <div class="row justify-content-md-center">
+            <div class="form-group col-md-4 col-off">
+              <input type="text" id="id_title" name="title" class="form-control" placeholder="Tytył">
+            </div>
+            </div>
+          <div class="row justify-content-md-center">
+            <div class="form-group col-md-4">
+              <input type="text" id="id_subtitle" name="subtitle" class="form-control" placeholder="Podtytuł">
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="form-group col-md-4">
+              <input type="text" id="id_date" name="date" class="form-control" placeholder="Rok">
+            </div>
+          </div>
+           <div class="row justify-content-md-center">
+            <div class="form-group col-md-4">
+             {{ form.image }}
+            </div>
+          </div>
+          <br/>
+          <div class="row justify-content-md-center">
+
+        <div class="row justify-content-md-center">
+            <div class="form-group col-md-4">
+          <p>
+            <button type="submit"  class="btn btn-primary btn-flat"><i
+                class="btn-icon fas fa-paper-plane"></i><span> Dodaj</span></button>
+          </p>
+                </div>
+        </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
